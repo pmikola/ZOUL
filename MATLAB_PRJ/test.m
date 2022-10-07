@@ -1,0 +1,14 @@
+omega_x = 2.5 .* (10.^-6)./ 2;
+omega_y = 3.5 .* (10.^-6)./ 2;
+omega_F = 1.5 .* (10.^-6) ./ 2;
+%x = 1;
+%y = 1;
+min = -omega_F;
+max = omega_F;
+%psi_b_prim = psi_b(x,y,omega_x,omega_y);
+fun = psi_F(omega_F)
+q = integral2(fun,min,max,min,max)
+%fun = abs(psi_F());
+%fun = fun.^2;
+%fint1 = int(fun,min,max)
+%fint2 = int(fint1,min,max)
